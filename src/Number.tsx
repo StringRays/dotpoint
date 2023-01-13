@@ -1,7 +1,8 @@
 import { useRef, useEffect } from 'react'
-import { NumberProps } from './types/numbers';
+import { NumberProps } from './types/canvas';
+import'./index.css';
 
-const Number = ({ num }: NumberProps) => {
+const Number = ({ num, size }: NumberProps) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
@@ -34,7 +35,8 @@ const Number = ({ num }: NumberProps) => {
                     context.fillStyle = "black";
                     context.moveTo(68, 90);
                     context.lineTo(32, 90);
-                    context.quadraticCurveTo(62, 60, 69, 38); 
+                    context.quadraticCurveTo(63.7, 59, 68.4, 38); 
+                    context.quadraticCurveTo(68.3, 36.5, 67.7, 35);
                     context.stroke();
                     context.beginPath();
                     context.arc(50, 38, 18, 1.1 * Math.PI, .2 * Math.PI);
@@ -162,7 +164,7 @@ const Number = ({ num }: NumberProps) => {
                     context.stroke();
                     context.beginPath();
                     context.fillStyle = "white";
-                    context.arc(68, 24, circleRadius, 0, 2 * Math.PI);
+                    context.arc(680, 240, circleRadius, 0, 2 * Math.PI);
                     context.stroke();  
                     context.fill();
                     context.beginPath();
@@ -240,6 +242,10 @@ const Number = ({ num }: NumberProps) => {
                     break;
                 }
             }
+/*
+the following works with default font, 
+I just wanted something that was all coordinate based
+*/
         // if (canvasRef.current) {
         //     const display = num.toString();
         //     const canvas = canvasRef.current;
@@ -416,6 +422,6 @@ const Number = ({ num }: NumberProps) => {
         }       
     },[num]);
 
-    return <canvas ref={canvasRef} height={100} width={100} />;
+    return <canvas className={size} ref={canvasRef} height="100px" width="100px" />;
 }
-export default Number
+export default Number;

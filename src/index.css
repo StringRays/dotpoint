@@ -11,3 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.xsNum {
+  height: 50px;
+  width: 50px;
+}
+
+.smallNum {
+  height: 100px;
+  width: 100px;
+}
+
+.medNum {
+  height: 150px;
+  width: 150px;
+}
+
+.largeNum {
+  height: 200px;
+  width: 200px;
+}
+
+.xlNum {
+  height: 250px;
+  width: 250px;
+}
+
+.xsOp {
+  height: 106px;
+  width: 50px;
+}
+
+.smallOp {
+  height: 206px;
+  width: 100px;
+}
+
+.medOp {
+  height: 306px;
+  width: 150px;
+}
+
+.largeOp {
+  height: 406px;
+  width: 200px;
+}
+
+.xlOp {
+  height: 506px;
+  width: 250px;
+}
