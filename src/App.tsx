@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Number from './Number'
 
 function App() {
+
+  const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
+      {
+        digits.map((digit) => 
+        <div style={{ border: '1px solid black' }}>
+          <Number num={digit} />
+        </div>
+        )
+      }
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
