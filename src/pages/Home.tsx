@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import Number from './Number';
-import Operator from './Operator';
-import Problem from './Problem';
-import Layout from './components/Layout';
+import Number from '../components/Number';
+import Operator from '../components/Operator';
+import Layout from '../components/Layout';
 
 const Home = () => {
     const [numberSize, setNumberSize] = useState('smallNum');
@@ -25,13 +24,15 @@ const Home = () => {
 
     return (
     <Layout>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
       <button 
         style={{ margin: "10px" }} 
         onClick={changeSize}>
           Toggle Number Size
       </button>
+      </div>
       <div 
-        style={{ display: "flex" }}>
+        style={{ display: "flex", justifyContent: 'center' }}>
       <div 
         style={{ 
           display: 'flex', 
@@ -61,13 +62,6 @@ const Home = () => {
         </div>
         )
       }
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <Problem />
-          <Problem />
-          <Problem />
-          <Problem />
-          <Problem />
         </div>
       </div>
     </Layout>

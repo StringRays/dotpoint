@@ -1,6 +1,10 @@
 import { useRef, useEffect } from 'react'
-import { OperatorProps } from './types/canvas';
-import'./index.css';
+import'../index.css';
+
+type OperatorProps = {
+    symbol: string;
+    size: string;
+}
 
 const Operator = ({ symbol, size }: OperatorProps) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);

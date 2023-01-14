@@ -1,6 +1,10 @@
 import { useRef, useEffect } from 'react'
-import { NumberProps } from './types/canvas';
-import'./index.css';
+import'../index.css';
+
+type NumberProps = {
+    num: number;
+    size: string;
+}
 
 const Number = ({ num, size }: NumberProps) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -244,7 +248,8 @@ const Number = ({ num, size }: NumberProps) => {
             }
 /*
 the following works with default font, 
-I just wanted something that was all coordinate based
+I just wanted numbers that were blockier 
+than most websafe fonst I could find
 */
         // if (canvasRef.current) {
         //     const display = num.toString();

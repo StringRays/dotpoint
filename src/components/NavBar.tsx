@@ -2,19 +2,45 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 
-const NavLinks = () => {
+type HighlightProps = {
+    path: string;
+    name: string;
+}
+
+const HighlightLink = ({ path, name }: HighlightProps ) => {
+    const [isHover, setIsHover] = useState(false);
+
     const linkStyle = {
+        backgroundColor: isHover ? '#755B69' : 'inherit',
         color: "white",
         border: "1px solid white",
         padding: '5px',
         marginTop: window.innerWidth>768 ? '0px' : "5px",
-        marginLeft: window.innerWidth>768 ? '10px' : "0px",
+        marginLeft: window.innerWidth>768 ? '20px' : "0px",
         borderRadius: "5px"
       };
+      
+      const handleMouseEnter = () => {
+         setIsHover(true);
+      };
+      const handleMouseLeave = () => {
+         setIsHover(false);
+      };
+    return (
+        <Link 
+            style={linkStyle} to={path}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}>
+            {name}
+        </Link>
+    )
+}
+
+const NavLinks = () => {
     return (
         <>
-            <Link style={linkStyle} to='/'>Home</Link>
-            <Link style={linkStyle} to='/'>Home</Link>
+            <HighlightLink path='/' name='Home' />
+            <HighlightLink path='/addition' name='Addition' />
         </>
     )
 }

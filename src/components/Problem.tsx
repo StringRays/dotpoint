@@ -1,7 +1,7 @@
 import Number from './Number';
 import Operator from './Operator';
 
-export const InnerProblem = () => {
+const InnerProblem = () => {
     return (
         <div 
             style={{ 
@@ -38,7 +38,7 @@ const Problem = () => {
         <div 
             style={{ 
                 height: '180px', 
-                width: '180px', 
+                width: '300px', 
                 paddingLeft: '20px', 
                 paddingRight: '20px', 
                 border: '1px solid black'}}>
