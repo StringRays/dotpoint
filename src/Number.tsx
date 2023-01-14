@@ -164,7 +164,7 @@ const Number = ({ num, size }: NumberProps) => {
                     context.stroke();
                     context.beginPath();
                     context.fillStyle = "white";
-                    context.arc(680, 240, circleRadius, 0, 2 * Math.PI);
+                    context.arc(68, 24, circleRadius, 0, 2 * Math.PI);
                     context.stroke();  
                     context.fill();
                     context.beginPath();

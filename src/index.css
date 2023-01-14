@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
@@ -15,6 +16,11 @@ code {
 .xsNum {
   height: 50px;
   width: 50px;
+}
+
+.pdfNum {
+  height: 60px;
+  width: 60px;
 }
 
 .smallNum {
@@ -40,6 +46,11 @@ code {
 .xsOp {
   height: 106px;
   width: 50px;
+}
+
+.pdfOp {
+  height: 126px;
+  width: 60px;
 }
 
 .smallOp {
