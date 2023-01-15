@@ -4,6 +4,7 @@ import'../index.css';
 type NumberProps = {
     num: number;
     size: string;
+    key?: string;
 }
 
 const Number = ({ num, size }: NumberProps) => {

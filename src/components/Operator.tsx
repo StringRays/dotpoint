@@ -4,6 +4,7 @@ import'../index.css';
 type OperatorProps = {
     symbol: string;
     size: string;
+    key?: string;
 }
 
 const Operator = ({ symbol, size }: OperatorProps) => {

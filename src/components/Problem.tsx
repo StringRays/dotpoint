@@ -41,10 +41,10 @@ const Problem = ({ numOne, numTwo, operator }: ProblemPropsWithKey) => {
                     }}>
                     <Number 
                         num={numOne} 
-                        size={'xsNum'}/>
+                        size={'xsNum'} />
                     <Number 
                         num={numTwo} 
-                        size={'xsNum'}/>
+                        size={'xsNum'} />
                 </div>
             </div>
         </div>

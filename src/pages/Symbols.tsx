@@ -23,12 +23,22 @@ const Symbols = () => {
     }
     return (
         <Layout>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <button 
+      <div 
+        style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'center',
+          maxWidth: '600px' 
+          }}>
+        <div style={{ marginTop: '10px', textAlign: 'center' }}><em>Ignore this random and not at all useful page, or play with clicking this button. 
+          I'm mainly here because the website creator likes clicking things and resized the numbers a bunch while drawing them. 
+          They haven't removed me yet and might experiment more here, so click to your heart's content! </em></div>
+      <div><button 
         style={{ margin: "10px" }} 
         onClick={changeSize}>
           Toggle Number Size
       </button>
+      </div>
       </div>
       <div 
         style={{ display: "flex", justifyContent: 'center' }}>
@@ -40,7 +50,7 @@ const Symbols = () => {
         }}>
       {
         operators.map((operator) => 
-        <div style={{ border: '1px solid black' }}>
+        <div style={{ border: '1px solid black' }} key={'op'+operator.toString()}>
           <Operator symbol={operator} size={opSize} />
         </div>
         )
@@ -54,7 +64,7 @@ const Symbols = () => {
           }}>
       {
         digits.map((digit) => 
-        <div style={{ border: '1px solid black' }}>
+        <div style={{ border: '1px solid black' }} key={'num'+digit.toString()}>
           <Number 
             num={digit} 
             size={numberSize} />
