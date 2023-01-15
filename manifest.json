@@ -1,0 +1,15 @@
+{
+  "short_name": "Math Stuff",
+  "name": "Worksheet Generator",
+  "icons": [
+    {
+      "src": "public/drawing-4.sketchpad.png",
+      "type": "image/png",
+      "sizes": "30x30"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
