@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/dotpoint/static/css/main.788839da.css",
-    "main.js": "/dotpoint/static/js/main.bd4ea464.js",
-    "index.html": "/dotpoint/index.html",
-    "main.788839da.css.map": "/dotpoint/static/css/main.788839da.css.map",
-    "main.bd4ea464.js.map": "/dotpoint/static/js/main.bd4ea464.js.map"
+    "main.css": "C:/Program Files/Git/dotpoint/static/css/main.788839da.css",
+    "main.js": "C:/Program Files/Git/dotpoint/static/js/main.bd4ea464.js",
+    "index.html": "C:/Program Files/Git/dotpoint/index.html",
+    "main.788839da.css.map": "C:/Program Files/Git/dotpoint/static/css/main.788839da.css.map",
+    "main.bd4ea464.js.map": "C:/Program Files/Git/dotpoint/static/js/main.bd4ea464.js.map"
   },
   "entrypoints": [
     "static/css/main.788839da.css",
