@@ -1,6 +1,40 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
+type DisclosureProps = {
+    clickHandler: any;
+    name: string;
+}
+
+const Disclosure = ({ clickHandler, name }: DisclosureProps) => {
+    const [isHover, setIsHover] = useState(false);
+
+    const linkStyle = {
+        backgroundColor: isHover ? '#755B69' : 'inherit',
+        color: "white",
+        border: "1px solid white",
+        padding: '5px',
+        margin: '10px',
+        borderRadius: "5px",
+      };
+    
+    const handleMouseEnter = () => {
+        setIsHover(true);
+     };
+    
+    const handleMouseLeave = () => {
+        setIsHover(false);
+     };
+    return (
+        <div 
+            style={linkStyle}
+            onClick={clickHandler}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}>
+                 {name}
+            </div>
+    )
+}
 
 type HighlightProps = {
     path: string;
@@ -15,7 +49,7 @@ const HighlightLink = ({ path, name }: HighlightProps ) => {
         color: "white",
         border: "1px solid white",
         padding: '5px',
-        marginTop: window.innerWidth>768 ? '0px' : "5px",
+        marginTop: window.innerWidth>768 ? '0px' : "10px",
         marginLeft: window.innerWidth>768 ? '20px' : "0px",
         borderRadius: "5px",
         textDecoration: 'none'
@@ -28,13 +62,13 @@ const HighlightLink = ({ path, name }: HighlightProps ) => {
          setIsHover(false);
       };
     return (
-        <Link 
-            style={linkStyle} to={path}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}>
-            {name}
-        </Link>
-    )
+            <Link 
+                style={linkStyle} to={path}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}>
+                {name}
+            </Link>
+        )
 }
 
 const NavLinks = () => {
@@ -60,6 +94,12 @@ const NavBar = () => {
         setWidth(window.innerWidth);
     }
 
+    const shrink = () => setDisplay(false);
+
+    const grow = () => setDisplay(true);
+
+
+
     useEffect(() => {
         window.addEventListener('resize', handleWindowSizeChange);
         return () => {
@@ -81,30 +121,10 @@ const NavBar = () => {
                 display ? (
                     <>
                     <NavLinks />
-                    <div 
-                        style={{
-                            color: "white",
-                            border: "1px solid white",
-                            borderRadius: '5px',
-                            margin: '5px',
-                            padding: '5px',
-                        }}
-                        onClick={() => setDisplay(false)}>
-                            Close
-                        </div> 
+                    <Disclosure clickHandler={shrink} name={'Close'} />
                     </>
                 ) : (
-                <div 
-                    style={{
-                        color: "white",
-                        border: "1px solid white",
-                        borderRadius: '5px',
-                        margin: '10px',
-                        padding: '5px',
-                    }}
-                    onClick={() => setDisplay(true)}>
-                        Menu
-                    </div>
+                <Disclosure clickHandler={grow} name={'Menu'} />
             )
             ) : (
                 <NavLinks />
