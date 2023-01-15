@@ -13,8 +13,7 @@ const Symbols = () => {
         const currentSize = numberSize.slice(0, numberSize.length-3);
         currentSize === 'small' ? setSizes('med') : 
         currentSize === 'med' ? setSizes('large') : 
-        currentSize === 'large' ? setSizes('xl') :
-        currentSize === 'xl' ? setSizes('xs') : setSizes('small');
+        currentSize === 'large' ? setSizes('xs') : setSizes('small');
     }
 
     const setSizes = (size: string) => {
@@ -30,8 +29,8 @@ const Symbols = () => {
           alignItems: 'center',
           maxWidth: '600px' 
           }}>
-        <div style={{ marginTop: '10px', textAlign: 'center' }}><em>Ignore this random and not at all useful page, or play with clicking this button. 
-          I'm mainly here because the website creator likes clicking things and resized the numbers a bunch while drawing them. 
+        <div style={{ marginTop: '10px', textAlign: 'center', padding: '10px' }}><em>Ignore this random and not at all useful page, or play with clicking this button. 
+          I'm mainly here because the website developer likes clicking things and resized the numbers a bunch while drawing them. 
           They haven't removed me yet and might experiment more here, so click to your heart's content! </em></div>
       <div><button 
         style={{ margin: "10px" }} 

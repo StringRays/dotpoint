@@ -38,11 +38,6 @@ code {
   width: 200px;
 }
 
-.xlNum {
-  height: 250px;
-  width: 250px;
-}
-
 .xsOp {
   height: 106px;
   width: 50px;
@@ -66,9 +61,4 @@ code {
 .largeOp {
   height: 406px;
   width: 200px;
-}
-
-.xlOp {
-  height: 506px;
-  width: 250px;
 }

@@ -17,7 +17,8 @@ const HighlightLink = ({ path, name }: HighlightProps ) => {
         padding: '5px',
         marginTop: window.innerWidth>768 ? '0px' : "5px",
         marginLeft: window.innerWidth>768 ? '20px' : "0px",
-        borderRadius: "5px"
+        borderRadius: "5px",
+        textDecoration: 'none'
       };
       
       const handleMouseEnter = () => {
@@ -98,7 +99,7 @@ const NavBar = () => {
                         color: "white",
                         border: "1px solid white",
                         borderRadius: '5px',
-                        margin: '5px',
+                        margin: '10px',
                         padding: '5px',
                     }}
                     onClick={() => setDisplay(true)}>
