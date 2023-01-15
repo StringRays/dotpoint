@@ -41,6 +41,7 @@ const NavLinks = () => {
         <>
             <HighlightLink path='/' name='Home' />
             <HighlightLink path='/addition' name='Addition' />
+            <HighlightLink path='/symbols' name='View All Symbols' />
         </>
     )
 }

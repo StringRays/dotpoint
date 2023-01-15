@@ -1,39 +1,17 @@
 import Number from './Number';
 import Operator from './Operator';
 
-const InnerProblem = () => {
-    return (
-        <div 
-            style={{ 
-                display: 'flex', 
-                justifyContent: 'center',
-                borderBottom: '2px solid black', 
-                marginLeft: '20px',
-                marginRight: '20px' 
-                }}>
-            <div>
-                <Operator 
-                    symbol={'+'} 
-                    size={'xsOp'} />
-            </div>
-            <div 
-                style={{ 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    justifyContent: "center" 
-                }}>
-                <Number 
-                    num={1} 
-                    size={'xsNum'}/>
-                <Number 
-                    num={2} 
-                    size={'xsNum'}/>
-            </div>
-        </div>
-    )
+export type ProblemProps = {
+    numOne: number;
+    numTwo: number;
+    operator: string;
 }
 
-const Problem = () => {
+interface ProblemPropsWithKey extends ProblemProps {
+    key: string;
+}
+
+const Problem = ({ numOne, numTwo, operator }: ProblemPropsWithKey) => {
     return (
         <div 
             style={{ 
@@ -42,7 +20,33 @@ const Problem = () => {
                 paddingLeft: '20px', 
                 paddingRight: '20px', 
                 border: '1px solid black'}}>
-            <InnerProblem />
+                <div 
+                style={{ 
+                    display: 'flex', 
+                    justifyContent: 'center',
+                    borderBottom: '2px solid black', 
+                    marginLeft: '20px',
+                    marginRight: '20px' 
+                    }}>
+                <div>
+                    <Operator 
+                        symbol={operator} 
+                        size={'xsOp'} />
+                </div>
+                <div 
+                    style={{ 
+                        display: 'flex', 
+                        flexDirection: 'column', 
+                        justifyContent: "center" 
+                    }}>
+                    <Number 
+                        num={numOne} 
+                        size={'xsNum'}/>
+                    <Number 
+                        num={numTwo} 
+                        size={'xsNum'}/>
+                </div>
+            </div>
         </div>
     )
 }

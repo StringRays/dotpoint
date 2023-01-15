@@ -1,6 +1,13 @@
-import Problem from './Problem';
+import Problem, { ProblemProps } from './Problem';
 
-const Worksheet = () => {
+export type WorkSheetProps = {
+    columns: Array<ProblemProps>;
+}
+
+const Worksheet = ({ columns }: WorkSheetProps ) => {
+    const colOne: Array<ProblemProps> = columns.slice(0, 5);
+    const colTwo: Array<ProblemProps> = columns.slice(5);
+
     return (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', justifyContent: 'space-around', padding: '10px' }}>
@@ -9,18 +16,26 @@ const Worksheet = () => {
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <Problem />
-                    <Problem />
-                    <Problem />
-                    <Problem />
-                    <Problem />
+                    {colOne &&
+                       colOne.map((problem, index) => (
+                            <Problem 
+                                numOne={problem.numOne} 
+                                numTwo={problem.numTwo} 
+                                operator={problem.operator}
+                                key={'one'+index.toString()}/>
+                       )) 
+                    }
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <Problem />
-                    <Problem />
-                    <Problem />
-                    <Problem />
-                    <Problem />
+                    {colTwo &&
+                       colTwo.map((problem, index) => (
+                            <Problem 
+                                numOne={problem.numOne} 
+                                numTwo={problem.numTwo} 
+                                operator={problem.operator}
+                                key={'two'+index.toString()} />
+                       )) 
+                    }
                 </div>
             </div>
         </div>
