@@ -1,6 +1,6 @@
 # Worksheet Generator
 
-*My partner is a special education teacher, and I am building this so that she can generate printable worksheets for her classroom. It generates worksheets using numbers with added circles 1-9. Solid circles symbolize one, and hollow circles symbolize two. This adds extra information to the numbers and has been useful especially for multi-sensory learners.*
+*My partner is a special education teacher, and I am building this so that she can generate printable worksheets for her classroom. It generates worksheets using numbers with added circles. Solid circles symbolize one, and hollow circles symbolize two. This adds extra information to the numbers and has been useful especially for multi-sensory learners.*
 
 Visit site [here](https://stringrays.github.io/dotpoint/);
 
