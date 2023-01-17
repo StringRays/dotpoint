@@ -1,6 +1,6 @@
-import Worksheet from '../components/WorkSheet';
+import Worksheet from '../components/Worksheet';
 import { useEffect, useState } from 'react';
-import { ProblemProps } from '../components/Problem'
+import { ProblemProps } from '../components/Problem';
 
 const Addition = () => {
     const [numbers, setNumbers] = useState<Array<ProblemProps>>();
@@ -16,10 +16,11 @@ const Addition = () => {
         }
         setNumbers(numberList);
     }, []);
-    
+
     return (
         <>
-        {numbers && <Worksheet columns={numbers} />}
+            {numbers && 
+                <Worksheet columns={numbers} />}
         </>
     )
 }
