@@ -16,6 +16,8 @@ const Number = ({ num, size }: NumberProps) => {
             const canvas = canvasRef.current;
             const context = canvas.getContext('2d'); 
             if (context){
+                //this makes sure context clears first - was drawing numbers on top of eachother before
+                context.clearRect(0, 0, 100, 100);
                 context.lineWidth = 6;
             switch(num){
                 case 0:

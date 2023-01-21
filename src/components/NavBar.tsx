@@ -76,6 +76,9 @@ const NavLinks = () => {
         <>
             <HighlightLink path='/' name='Home' />
             <HighlightLink path='/addition' name='Addition' />
+            <HighlightLink path='/subtraction' name='Subtraction' />
+            <HighlightLink path='/multiplication' name='Multiplication' />
+            <HighlightLink path='/division' name='Division' />
             <HighlightLink path='/symbols' name='View All Symbols' />
         </>
     )
