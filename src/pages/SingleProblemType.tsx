@@ -1,7 +1,7 @@
 import Worksheet from '../components/WorkSheet';
 import { ProblemProps } from '../components/Problem';
 
-type ProblemTypes = 'addition' | 'subtraction' | 'multiplication' | 'division';
+export type ProblemTypes = 'addition' | 'subtraction' | 'multiplication' | 'division';
 
 interface ProblemType {
     problemType: ProblemTypes
@@ -78,10 +78,10 @@ const SingleProblemType = ({ problemType }: ProblemType) => {
 
     return (
         <>
-            {problemType === 'addition' && <Worksheet generator={addition} />}
-            {problemType === 'subtraction' && <Worksheet generator={subtraction} />}
-            {problemType === 'multiplication' && <Worksheet generator={multiplication} />}
-            {problemType === 'division' && <Worksheet generator={division} />}
+            {problemType === 'addition' && <Worksheet generator={addition} problemType={problemType} />}
+            {problemType === 'subtraction' && <Worksheet generator={subtraction} problemType={problemType} />}
+            {problemType === 'multiplication' && <Worksheet generator={multiplication} problemType={problemType} />}
+            {problemType === 'division' && <Worksheet generator={division} problemType={problemType} />}
         </>
     )
 }

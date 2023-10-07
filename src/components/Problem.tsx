@@ -19,7 +19,8 @@ const Problem = ({ numOne, numTwo, operator }: ProblemPropsWithKey) => {
                 width: '300px', 
                 paddingLeft: '20px', 
                 paddingRight: '20px', 
-                border: '1px solid black'}}>
+                border: '1px solid black'}}
+            data-cy={"problem"}>
                 <div 
                 style={{ 
                     display: 'flex', 

@@ -28,7 +28,10 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "npm run cy:run-headless",
+    "test-deployed": "cypress run --headless --config baseUrl='https://stringrays.github.io/dotpoint/#/'",
+    "cy:run": "cypress run --browser chrome",
+    "cy:run-headless": "cypress run --headless",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -48,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^13.3.0"
   }
 }

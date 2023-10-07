@@ -74,7 +74,7 @@ const Operator = ({ symbol, size }: OperatorProps) => {
             }
         }
     }, [symbol])
-    return <canvas className={size} ref={canvasRef} height="200px" width="100px" />;
+    return <canvas className={size} ref={canvasRef} height="200px" width="100px" data-cy={symbol} />;
 };
 
 export default Operator;

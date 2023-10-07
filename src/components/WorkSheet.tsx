@@ -1,12 +1,14 @@
 import Problem, { ProblemProps } from './Problem';
+import { ProblemTypes } from '../pages/SingleProblemType';
 import { useRef, useState, useEffect } from 'react';
 import ReactToPrint from 'react-to-print';
 
-export type WorksheetProps = {
+type WorksheetProps = {
     generator: () => Array<ProblemProps>;
+    problemType: ProblemTypes;
 }
 
-const Worksheet = ({ generator }: WorksheetProps ) => {
+const Worksheet = ({ generator, problemType }: WorksheetProps ) => {
     const componentRef = useRef(null);
     const [numbers, setNumbers] = useState<Array<ProblemProps>>();
 
@@ -20,6 +22,8 @@ const Worksheet = ({ generator }: WorksheetProps ) => {
         padding: '5px'
     }
 
+
+
     function generateNew() {
         const newNums: Array<ProblemProps> | null = generator();
         newNums && setNumbers(newNums);
@@ -32,7 +36,9 @@ const Worksheet = ({ generator }: WorksheetProps ) => {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div style={{ backgroundColor: '#83b692', display: 'flex', width: '100vw', justifyContent: 'center' }}>
+            <div 
+                style={{ backgroundColor: '#83b692', display: 'flex', width: '100vw', justifyContent: 'center' }}
+                data-cy={'worksheet-menu'}>
                 <ReactToPrint
                 trigger={() => <button style={buttonStyle}>Print this Worksheet</button>}
                 content={() => componentRef.current}
@@ -40,7 +46,9 @@ const Worksheet = ({ generator }: WorksheetProps ) => {
             <button style={buttonStyle} onClick={generateNew}>Generate New Worksheet</button>
             <button style={buttonStyle}><a href='/dotpoint/' style={{ textDecoration: 'none', color: 'black' }}>Return Home</a></button>
         </div>
-        <div ref={componentRef} style={{ display: 'flex', flexDirection: 'column' }}>
+        <div ref={componentRef} 
+            style={{ display: 'flex', flexDirection: 'column' }}
+            data-cy={'worksheet-'+problemType}>
             <div style={{ display: 'flex', justifyContent: 'space-around', padding: '30px' }}>
                 <div style={nameDate}>Name: ____________________________________________</div>
                 <div style={nameDate}>Date: ____________________________________________</div>

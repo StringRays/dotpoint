@@ -430,6 +430,6 @@ than most websafe fonst I could find
         }       
     },[num]);
 
-    return <canvas className={size} ref={canvasRef} height="100px" width="100px" />;
+    return <canvas className={size} ref={canvasRef} height="100px" width="100px" data-cy={num} />;
 }
 export default Number;
