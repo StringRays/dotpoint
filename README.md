@@ -6,9 +6,6 @@ Visit site [here](https://stringrays.github.io/dotpoint/);
 
 ## To Do
 
-- write instruction page
-- make menu/close buttons highlightable
-- make subtraction, division, and multiplication problems
 - make form component for allowing more customizable problem sets
 - remove the symbols page that I had there mainly for development
 - use a pdf rendering library to get more control over printable layout

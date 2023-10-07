@@ -1,4 +1,4 @@
-import Worksheet from '../components/Worksheet';
+import Worksheet from '../components/WorkSheet';
 import { ProblemProps } from '../components/Problem';
 
 type ProblemTypes = 'addition' | 'subtraction' | 'multiplication' | 'division';

@@ -29,9 +29,9 @@ const Symbols = () => {
           alignItems: 'center',
           maxWidth: '600px' 
           }}>
-        <div style={{ marginTop: '10px', textAlign: 'center', padding: '10px', maxWidth: `${window.innerWidth-10}` }}><em>Ignore this random and not at all useful page, or play with clicking this button. 
-          I'm mainly here because the website developer likes clicking things and resized the numbers a bunch while drawing them. 
-          They haven't removed me yet and might experiment more here, so click to your heart's content! </em></div>
+        <div style={{ marginTop: '10px', textAlign: 'center', padding: '10px', maxWidth: `${window.innerWidth-10}` }}><em>This page
+          was used for development, but can also be used to look closer at the numbers at different sizes. Feel free to screenshot
+          and print the numbers for use in class projects or number learning games!</em></div>
       <div><button 
         style={{ margin: "10px" }} 
         onClick={changeSize}>
